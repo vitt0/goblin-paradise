@@ -3,8 +3,8 @@ class ExternalScene extends window.BaseScene {
     super({
       player: {
         spawn: {
-          x: 210,
-          y: 280,
+          x: 110,
+          y: 180,
         },
       },
     });
