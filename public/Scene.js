@@ -43,8 +43,8 @@ class ExternalScene extends window.BaseScene {
 
     this.initialiseNPCs([
       {
-        x: 240,
-        y: 180,
+        x: 380,
+        y: 170,
         npc: "Test",
         clothing: npcClothing,
         onClick: () => {
