@@ -447,6 +447,17 @@
                  "width":14.6667,
                  "x":152.66665,
                  "y":107.500016666667
+                }, 
+                {
+                 "height":30.5,
+                 "id":39,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":383.5,
+                 "y":149.5
                 }],
          "opacity":1,
          "type":"objectgroup",
