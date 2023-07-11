@@ -8,28 +8,29 @@ class ExternalScene extends window.BaseScene {
         },
       },
     });
-
-    // Projectile types
-    this.blueberryProjectile = {
-      speed: 500,       // Fast speed
-      size: 10,         // Small size
-      damage: 0.25,     // Damage value
-    };
-
-    this.orangeProjectile = {
-      speed: 300,       // Medium speed
-      size: 20,         // Medium size
-      damage: 0.3,      // Damage value
-    };
-
-    this.appleProjectile = {
-      speed: 100,       // Slow speed
-      size: 30,         // Big size
-      damage: 0.35,     // Damage value
-    };
+  }
 
   create() {
     super.create();
+
+    // Define projectile types
+    const blueberryProjectile = {
+      speed: 500,
+      size: 10,
+      damage: 0.25,
+    };
+
+    const orangeProjectile = {
+      speed: 300,
+      size: 20,
+      damage: 0.3,
+    };
+
+    const appleProjectile = {
+      speed: 100,
+      size: 30,
+      damage: 0.35,
+    };
 
     const npcClothing = {
       body: "Goblin Potion",
@@ -47,18 +48,37 @@ class ExternalScene extends window.BaseScene {
         npc: "Test",
         clothing: npcClothing,
         onClick: () => {
+          // Open modal and allow shooting NPC
           window.openModal({
             npc: {
               name: "Test",
               clothing: npcClothing,
             },
-            jsx: "Shot me if you can!",
+            jsx: "Shoot me if you can!",
+            onShoot: (projectileType) => {
+              // Handle shooting action based on projectile type
+              switch (projectileType) {
+                case "blueberry":
+                  // Code to shoot using blueberryProjectile properties
+                  console.log("Blueberry projectile shot!");
+                  break;
+                case "orange":
+                  // Code to shoot using orangeProjectile properties
+                  console.log("Orange projectile shot!");
+                  break;
+                case "apple":
+                  // Code to shoot using appleProjectile properties
+                  console.log("Apple projectile shot!");
+                  break;
+                default:
+                  console.log("Unknown projectile type!");
+              }
+            },
           });
         },
       },
     ]);
-    
-  }
 
-  // Other methods and game logic...
+    // Other initialization and game logic...
+  }
 }
